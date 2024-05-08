@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'Services/auth.dart';
+import 'Services/auth_service.dart';
 import 'Services/consts.dart';
 import 'package:provider/provider.dart';
 import 'package:lottie/lottie.dart';

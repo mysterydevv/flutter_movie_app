@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:firebase_core/firebase_core.dart';
-import 'Services/auth.dart';
+import 'Services/auth_service.dart';
 import 'routes.dart';
 import 'package:provider/provider.dart';
 
