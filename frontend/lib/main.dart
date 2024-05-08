@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:http/http.dart' as http;
 import 'package:firebase_core/firebase_core.dart';
 import 'Services/auth_service.dart';
 import 'routes.dart';
 import 'package:provider/provider.dart';
+
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -16,24 +16,7 @@ class App extends StatefulWidget {
 
   @override
   State<App> createState() => _AppState();
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-          appBar: AppBar(
-            title: Text("Node.js server test"),
-          ),
-          body: Center(
-            child: ElevatedButton(
-              onPressed: () async {
-                final response = await http
-                    .get(Uri.parse('http://192.168.1.12:3000/api/data'));
-                print('responce from node.js: ${response.body}');
-              },
-              child: const Text('Connect to Node.js'),
-            ),
-          )),
-    );
-  }
+
 }
 
 

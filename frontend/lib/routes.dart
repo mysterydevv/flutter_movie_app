@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'Login.dart';
-import 'root.dart';
+import 'screens/auth_screen.dart';
+import 'screens/main_screen.dart';
+import 'screens/root_screen.dart';
 
 
 GoRouter router = GoRouter(initialLocation: '/', routes: [
@@ -14,11 +15,11 @@ GoRouter router = GoRouter(initialLocation: '/', routes: [
     builder: (context, state) => const LoginScreen(),
     pageBuilder: defaultPageBuilder<LoginScreen>(const LoginScreen()),
   ),
-  // GoRoute(
-  //   path: '/main',
-  //   builder: (context, state) => const MainScreen(),
-  //   pageBuilder: defaultPageBuilder<MainScreen>(const MainScreen()),
-  // ),
+  GoRoute(
+    path: '/main',
+    builder: (context, state) => ApiTestScreen(),
+    pageBuilder: defaultPageBuilder<ApiTestScreen>(ApiTestScreen()),
+  ),
   // GoRoute(
   //   path: '/search',
   //   builder: (context, state) => const SearchScreen(),

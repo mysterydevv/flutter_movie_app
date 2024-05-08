@@ -1,7 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'Login.dart';
-
+import 'auth_screen.dart';
+import 'main_screen.dart';
 
 class NavScreen extends StatefulWidget with RouteAware {
   const NavScreen({super.key});
@@ -17,7 +17,7 @@ class _NavScreenState extends State<NavScreen> {
       body: StreamBuilder(
         stream: FirebaseAuth.instance.authStateChanges(),
         builder: (context, snapshot) {
-          return snapshot.hasData ? LoginScreen() : LoginScreen();
+          return snapshot.hasData ? ApiTestScreen() : LoginScreen();
         },
       ),
     );
